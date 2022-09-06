@@ -1,4 +1,4 @@
-const data = require('../data/zoo_data');
+const data = require('../data/zoo_data.json');
 
 function getOldestFromFirstSpecies(id) {
   // seu código aqui
