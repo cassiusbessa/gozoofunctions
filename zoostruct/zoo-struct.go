@@ -9,7 +9,7 @@ type zoo_data struct {
 	Species   []Specie  `json:"species"`
 	Employees []Employe `json:"employees"`
 	Hours     hour      `json:"hours"`
-	Price     price     `json:"price"`
+	Price     price     `json:"prices"`
 }
 
 type Specie struct {
@@ -67,9 +67,9 @@ type hour struct {
 }
 
 type price struct {
-	Adult  float32 `json:"adult"`
-	Child  float32 `json:"child"`
-	Senior float32 `json:"senior"`
+	Adult  float64 `json:"adult"`
+	Child  float64 `json:"child"`
+	Senior float64 `json:"senior"`
 }
 
 func GetZooStruct() zoo_data {
