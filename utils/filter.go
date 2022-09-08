@@ -1,4 +1,4 @@
-package filters
+package utils
 
 import (
 	"github.com/cassiusbessa/gozoofunctions/zoostruct"
