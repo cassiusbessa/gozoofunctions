@@ -7,7 +7,7 @@ import (
 
 type zoo_data struct {
 	Species   []Specie  `json:"species"`
-	Employees []employe `json:"employees"`
+	Employees []Employe `json:"employees"`
 	Hours     hour      `json:"hours"`
 	Price     price     `json:"price"`
 }
@@ -27,7 +27,7 @@ type Resident struct {
 	Age  int    `json:"age"`
 }
 
-type employe struct {
+type Employe struct {
 	Id             string   `json:"id"`
 	FirstName      string   `json:"firstName"`
 	LastName       string   `json:"lastName"`
