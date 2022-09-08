@@ -1,3 +1,3 @@
-module github.com/cassiusbessa/zoofunctions
+module github.com/cassiusbessa/gozoofunctions
 
 go 1.19
