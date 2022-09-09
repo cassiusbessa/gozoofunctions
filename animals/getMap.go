@@ -12,9 +12,18 @@ func GetMap(options Options) interface{} {
 	for _, c := range cardenal {
 		animalsMap[c] = map[string][]string{}
 	}
-	for _, s := range zooData.Species {
-		for _, r := range s.Residents {
-			animalsMap[s.Location][s.Name] = append(animalsMap[s.Location][s.Name], r.Name)
+
+	if options.IncludeNames {
+		for _, s := range zooData.Species {
+			for _, r := range s.Residents {
+				if options.Sex == "" {
+					animalsMap[s.Location][s.Name] = append(animalsMap[s.Location][s.Name], r.Name)
+				} else {
+					if r.Sex == options.Sex {
+						animalsMap[s.Location][s.Name] = append(animalsMap[s.Location][s.Name], r.Name)
+					}
+				}
+			}
 		}
 	}
 	return animalsMap
