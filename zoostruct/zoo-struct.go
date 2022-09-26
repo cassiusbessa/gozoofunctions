@@ -8,7 +8,7 @@ import (
 type zoo_data struct {
 	Species   []Specie  `json:"species"`
 	Employees []Employe `json:"employees"`
-	Hours     hour      `json:"hours"`
+	Hours     Hour      `json:"hours"`
 	Price     price     `json:"prices"`
 }
 
@@ -35,34 +35,34 @@ type Employe struct {
 	ResponsibleFor []string `json:"responsibleFor"`
 }
 
-type hour struct {
+type Hour struct {
 	Tuesday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Wednesday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Thursday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Friday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Saturday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Sunday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 	Monday struct {
-		Open  string `json:"open"`
-		Close string `json:"close"`
+		Open  int `json:"open"`
+		Close int `json:"close"`
 	}
 }
 
@@ -78,7 +78,6 @@ func GetZooStruct() zoo_data {
 		panic(error)
 	}
 	zoo := zoo_data{}
-	json.Unmarshal([]byte(data), &zoo)
+	json.Unmarshal(data, &zoo)
 	return zoo
-
 }
